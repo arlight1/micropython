@@ -130,8 +130,8 @@ Sockets and WiFi buffers overflow
 
 Socket instances remain active until they are explicitly closed. This has two
 consequences. Firstly they occupy RAM, so an application which opens sockets
-without closing them may eventually run out of memory. Secondly not properly
-closed socket can cause the low-level part of the vendor WiFi stack to emit
+without closing them may eventually run out of memory. Secondly improperly
+closed sockets can cause the low-level part of the vendor WiFi stack to emit
 ``Lmac`` errors. This occurs if data comes in for a socket and is not
 processed in a timely manner. This can overflow the WiFi stack input queue
 and lead to a deadlock. The only recovery is by a hard reset.
